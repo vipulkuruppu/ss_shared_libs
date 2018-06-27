@@ -13,4 +13,5 @@ import uob.jenkins.shared.common.*
         println "Finishing JenkinsSlave.getLogonUser()...."
         return propReader.getPropertyValue('/tmp/slave.properties', 'logon.user')
     }
+    return this
 //}

@@ -2,7 +2,7 @@
 package uob.jenkins.shared.common
 //import groovy.util.ConfigSlurper
 
-class ResourcePropertyReader {
+//class ResourcePropertyReader {
 
     //@NonCPS
     String getPropertyValue(String propertyFile, String property){
@@ -18,5 +18,7 @@ class ResourcePropertyReader {
         return config."${property}"
 
     }
-}
+
+    return this
+//}
 
