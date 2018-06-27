@@ -8,14 +8,15 @@ String getPropertyValue(String propertyFile, String property){
     println "Starting ResourcePropertyReader.getPropertyValue()...."
 
     def propertyFileResource = libraryResource propertyFile
-    //def props = new Properties()
+    def props = new Properties()
     //def propFile = new File(propertyFileResource)
-    //props.load(new DataInputStream(propertyFileResource))
-    //def config = new ConfigSlurper("${property}").parse(props)
-    println propertyFileResource.class    
+    def stream = new ByteArrayInputStream(propertyFileResource.getBytes(StandardCharsets.UTF_8));
+    props.load(new DataInputStream(stream))
+    def config = new ConfigSlurper("${property}").parse(props)
+
     println "Finishing ResourcePropertyReader.getPropertyValue()...."
-    //return config."${property}"
-    return propertyFileResource
+    return config."${property}"
+    //return propertyFileResource
 
 }
 return this
