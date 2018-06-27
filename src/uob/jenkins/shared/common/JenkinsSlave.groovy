@@ -11,7 +11,7 @@ import uob.jenkins.shared.common.*
         def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
 
         println "Finishing JenkinsSlave.getLogonUser()...."
-        return propReader.getPropertyValue('/tmp/slave.properties', 'logon.user')
+        return propReader.getPropertyValue('/tmp/slave.properties', 'logonuser')
     }
     return this
 //}

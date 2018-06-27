@@ -10,7 +10,7 @@ def call(Map upload){
     // get logon user ID
     println "Starting uploadToSlave...."
     def js = new uob.jenkins.shared.common.JenkinsSlave()
-    def userID = js.getLogonUser('CLSTSG80')
+    def userID = js.getLogonUser(upload.slave)
     println "Finishing uploadToSlave...."
 
     println userID
