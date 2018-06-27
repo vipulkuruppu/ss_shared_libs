@@ -4,11 +4,13 @@ import groovy.util.ConfigSlurper
 
 
 String getPropertyValue(String propertyFile, String property){
-    def propertyFileResource = libraryResource propertyFile
+    
     println "Starting ResourcePropertyReader.getPropertyValue()...."
+
+    def propertyFileResource = libraryResource propertyFile
     def props = new Properties()
-    def propFile = new File(propertyFileResource)
-    props.load(propFile.newDataInputStream())
+    //def propFile = new File(propertyFileResource)
+    props.load(propertyFileResource.newDataInputStream())
     def config = new ConfigSlurper("${property}").parse(props)
         
     println "Finishing ResourcePropertyReader.getPropertyValue()...."
