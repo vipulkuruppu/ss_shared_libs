@@ -1,31 +1,18 @@
 #!/bin/env groovy
 package uob.jenkins.shared.common
-//import groovy.util.ConfigSlurper
+import groovy.util.ConfigSlurper
 
-//class ResourcePropertyReader {
 
-    //@NonCPS
-    String getPropertyValue(String propertyFile, String property){
-        //def propertyFileResource = libraryResource 'slaves/CLSTSG80/slave.properties'
-        //def config = new ConfigSlurper(property).parse(new File(propertyFile).toURL())
-        println "Starting ResourcePropertyReader.getPropertyValue()...."
-        def properties = new Properties()
-        def propertiesFile = new File(propertyFile)
-        properties.load(propertiesFile.newDataInputStream())
-        def config = new ConfigSlurper("${property}").parse(properties)
+String getPropertyValue(String propertyFile, String property){
+    def propertyFileResource = libraryResource 'slaves/CLSTSG80/slave.properties'
+    println "Starting ResourcePropertyReader.getPropertyValue()...."
+    def properties = new Properties()
+    def propertiesFile = new File(propertyFile)
+    properties.load(propertiesFile.newDataInputStream())
+    def config = new ConfigSlurper("${property}").parse(properties)
         
-        //def props = new Properties()
-        //new File(propertyFile).withInputStream { 
-        //stream -> props.load(stream) 
-        //}
-        
-        println "Finishing ResourcePropertyReader.getPropertyValue()...."
-        return config."${property}"
-        //return props[property]
-        //return "ownclssg"
+    println "Finishing ResourcePropertyReader.getPropertyValue()...."
+    return config."${property}"
 
-    }
-
-    return this
-//}
-
+}
+return this

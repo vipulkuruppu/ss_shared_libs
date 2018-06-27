@@ -1,17 +1,14 @@
 #!/bin/env groovy
 package uob.jenkins.shared.common
-import uob.jenkins.shared.common.*
-
-//class JenkinsSlave {
+import uob.jenkins.shared.common.ResourcePropertyReader
     
-    String getLogonUser(String slave){
+String getLogonUser(String slave){
 
-        //def slave_properties = 'slaves/' + slave + '/slave.properties'
-        println "Starting JenkinsSlave.getLogonUser()...."
-        def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
+    //def slave_properties = 'slaves/' + slave + '/slave.properties'
+    println "Starting JenkinsSlave.getLogonUser()...."
+    def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
 
-        println "Finishing JenkinsSlave.getLogonUser()...."
-        return propReader.getPropertyValue('/tmp/slave.properties', 'logonuser')
-    }
-    return this
-//}
+    println "Finishing JenkinsSlave.getLogonUser()...."
+    return propReader.getPropertyValue('/tmp/slave.properties', 'logonuser')
+}
+return this
