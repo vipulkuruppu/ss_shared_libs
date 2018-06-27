@@ -15,7 +15,7 @@ def call(Map upload){
     def js = new uob.jenkins.shared.common.JenkinsSlave()
     def userID = js.getLogonUser(upload.slave)
 
-    println "Using " + userID + " with Slave " + upload.slave
+    println "Using ID \"" + userID + "\" with Slave " + upload.slave
 
     // create remote destination if not available
     //echo 'ssh ${userID}@${upload.slave} << _eoc; if [ -d ${WORKSPACE}/${upload.destinationDir} ]; then mkdir -p ${WORKSPACE}/${upload.destinationDir}; fi; _eoc'
