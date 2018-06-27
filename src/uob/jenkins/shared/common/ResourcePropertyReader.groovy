@@ -11,12 +11,12 @@ String getPropertyValue(String propertyFile, String property){
     def props = new Properties()
     //def propFile = new File(propertyFileResource)
     def stream = new ByteArrayInputStream(propertyFileResource.getBytes(StandardCharsets.UTF_8));
-    props.load(new DataInputStream(stream))
-    def config = new ConfigSlurper("${property}").parse(props)
+    //props.load(new DataInputStream(stream))
+    //def config = new ConfigSlurper("${property}").parse(props)
 
     println "Finishing ResourcePropertyReader.getPropertyValue()...."
-    return config."${property}"
-    //return propertyFileResource
+    //return config."${property}"
+    return propertyFileResource
 
 }
 return this
