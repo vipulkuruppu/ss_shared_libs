@@ -15,7 +15,8 @@ package uob.jenkins.shared.common
         def config = new ConfigSlurper().parse(properties)
         
         println "Finishing ResourcePropertyReader.getPropertyValue()...."
-        return config."${property}"
+        //return config."${property}"
+        return "ownclssg"
 
     }
 
