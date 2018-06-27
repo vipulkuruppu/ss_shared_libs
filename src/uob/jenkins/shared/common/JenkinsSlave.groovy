@@ -1,10 +1,10 @@
+#!/bin/env groovy
 /******************************************************************************
 Class: JenkinsSlave - To read jenkins slave details
 Author: Vipul Kuruppu (unckur)
 Created on: 28-06-2018
 ******************************************************************************/
 
-#!/bin/env groovy
 package uob.jenkins.shared.common
 import uob.jenkins.shared.common.ResourcePropertyReader
     
