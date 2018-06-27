@@ -1,10 +1,10 @@
+#!/bin/env groovy
 /******************************************************************************
 Class: ResourcePropertyReader - To read properties from shared lib resources
 Author: Vipul Kuruppu (unckur)
 Created on: 28-06-2018
 ******************************************************************************/
 
-#!/bin/env groovy
 package uob.jenkins.shared.common
 import groovy.util.ConfigSlurper
 
