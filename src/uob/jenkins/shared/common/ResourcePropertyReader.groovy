@@ -4,7 +4,7 @@ import groovy.util.ConfigSlurper
 
 
 String getPropertyValue(String propertyFile, String property){
-    def propertyFileResource = libraryResource "\'" + propertyFile + "\'"
+    def propertyFileResource = libraryResource propertyFile
     println "Starting ResourcePropertyReader.getPropertyValue()...."
     def props = new Properties()
     def propFile = new File(propertyFileResource)
