@@ -1,6 +1,6 @@
 #!/bin/env groovy
 package uob.jenkins.shared.common
-import uob.jenkins.shared.common.ResourcePropertyReader
+import uob.jenkins.shared.common.*
 
 class JenkinsSlave {
     

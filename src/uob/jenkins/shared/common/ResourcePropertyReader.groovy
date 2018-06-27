@@ -1,6 +1,6 @@
 #!/bin/env groovy
 package uob.jenkins.shared.common
-import groovy.util.ConfigSlurper
+//import groovy.util.ConfigSlurper
 
 class ResourcePropertyReader {
 
