@@ -2,7 +2,7 @@
 package uob.jenkins.shared.common
 import uob.jenkins.shared.common.*
 
-class JenkinsSlave {
+//class JenkinsSlave {
     
     String getLogonUser(String slave){
 
@@ -13,4 +13,4 @@ class JenkinsSlave {
         println "Finishing JenkinsSlave.getLogonUser()...."
         return propReader.getPropertyValue('/tmp/slave.properties', 'logon.user')
     }
-}
+//}
