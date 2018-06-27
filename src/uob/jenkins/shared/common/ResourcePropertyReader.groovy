@@ -10,7 +10,7 @@ String getPropertyValue(String propertyFile, String property){
     def propertyFileResource = libraryResource propertyFile
     def props = new Properties()
     //def propFile = new File(propertyFileResource)
-    def stream = new ByteArrayInputStream(propertyFileResource.getBytes(StandardCharsets.UTF_8));
+    def stream = new ByteArrayInputStream(propertyFileResource.getBytes(StandardCharsets.UTF_8))
     //props.load(new DataInputStream(stream))
     //def config = new ConfigSlurper("${property}").parse(props)
 
