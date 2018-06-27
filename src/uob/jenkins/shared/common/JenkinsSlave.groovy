@@ -15,6 +15,6 @@ String getLogonUser(String slave){
     def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
 
     // for debugging - println "Finishing JenkinsSlave.getLogonUser()...."
-    return propReader.getPropertyValue(slave_properties, 'logonuser')
+    return propReader.getPropertyValue(slave_properties, 'logon.user')
 }
 return this
