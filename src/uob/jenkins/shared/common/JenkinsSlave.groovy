@@ -11,6 +11,6 @@ class JenkinsSlave {
         def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
 
         println "Finishing JenkinsSlave.getLogonUser()...."
-        return propReader.getPropertyValue('/tmp/slave.properties', 'logon_user')
+        return propReader.getPropertyValue('/tmp/slave.properties', 'logon.user')
     }
 }
