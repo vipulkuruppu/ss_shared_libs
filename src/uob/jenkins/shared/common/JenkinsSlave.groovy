@@ -4,11 +4,11 @@ import uob.jenkins.shared.common.ResourcePropertyReader
     
 String getLogonUser(String slave){
 
-    //def slave_properties = 'slaves/' + slave + '/slave.properties'
     println "Starting JenkinsSlave.getLogonUser()...."
+    def slave_properties = 'slaves/' + slave + '/slave.properties'
     def propReader = new uob.jenkins.shared.common.ResourcePropertyReader()
 
     println "Finishing JenkinsSlave.getLogonUser()...."
-    return propReader.getPropertyValue('/tmp/slave.properties', 'logonuser')
+    return propReader.getPropertyValue(slave_properties, 'logonuser')
 }
 return this
